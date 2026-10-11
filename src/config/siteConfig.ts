@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline: "A curious little space to explore Teacher-Centered Learning.",
   projectLabel: "Kelompok 1 | TCL Learning Project",
   courseName: "Teori & Desain Pembelajaran (Pedagogi)",
-  university: "Universitas Indonesia",
+  university: "STDIIS Putri",
   semester: "Semester Gasal 2026/2027",
 
   // Mascot Information

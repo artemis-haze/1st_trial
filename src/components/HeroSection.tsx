@@ -32,7 +32,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <span aria-hidden="true">·</span>
           <span>Pedagogi & Desain Instruksional</span>
           <span aria-hidden="true">·</span>
-          <span>Universitas Indonesia</span>
+          <span>{siteConfig.university}</span>
         </div>
 
         {/* Hero Title & Identity */}
