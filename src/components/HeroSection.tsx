@@ -118,7 +118,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <div className="relative rounded-2xl overflow-hidden aspect-[4/3] bg-[#FCECF1] border border-[#F7DDE5]">
                 <img
-                  src={${import.meta.env.BASE_URL}src/assets/images/hero_stationery_tcl_1791675267552.jpg}
+  src={heroStationery}
                   alt="Catatan Jurnal Belajar Pedagogi TCL RADA PUSING"
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
@@ -133,7 +133,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <div className="mt-4 p-3.5 bg-[#FCECF1]/80 rounded-2xl border border-[#F7DDE5] flex items-center gap-3.5">
                 <div className="w-16 h-16 rounded-2xl overflow-hidden bg-white border border-[#D98FA6] shrink-0 p-0.5 shadow-sm">
                   <img
-                    src={${import.meta.env.BASE_URL}src/assets/images/mascot_bunga_pusing_1791675253387.jpg}
+  src={mascotBunga}
                     alt="Mascot Si Bunga Pusing"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
