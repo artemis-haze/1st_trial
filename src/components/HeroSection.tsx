@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { siteConfig } from '../config/siteConfig';
 import { BookOpen, Sparkles, ArrowRight, Baby, HelpCircle, Layers, CheckCircle2 } from 'lucide-react';
 
@@ -11,6 +11,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenPaudPlaceholder,
   onScrollToSection,
 }) => {
+  const [isTitlePopped, setIsTitlePopped] = useState(false);
   return (
     <section id="beranda" className="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden">
       {/* Decorative botanical & question marks background subtle doodles */}
@@ -38,12 +39,28 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         {/* Hero Title & Identity */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#2D2226] font-['Outfit'] leading-[1.12]">
-              Selamat Datang di{' '}
-              <span className="text-[#A94F70] relative inline-block underline decoration-[#F7DDE5] decoration-wavy decoration-2">
-                {siteConfig.websiteName}
-              </span>
-            </h1>
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setIsTitlePopped(!isTitlePopped)}
+                className="text-left group cursor-pointer focus:outline-none"
+                title="Klik untuk kejutan kecil!"
+              >
+                {!isTitlePopped ? (
+                  <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#A94F70] font-['Outfit'] leading-[1.12] title-glow-flicker inline-block transition-transform duration-200 group-hover:scale-102">
+                    {siteConfig.websiteName}
+                  </h1>
+                ) : (
+                  <h1 className="text-2xl sm:text-3xl font-bold text-[#A94F70] font-['Outfit'] leading-snug animate-pop-out inline-block bg-[#FCECF1] px-4 py-2 rounded-2xl border border-[#D98FA6] shadow-xs">
+                    maaf, saya gamau pusing sendirian 😆
+                  </h1>
+                )}
+              </button>
+              <div className="text-[11px] text-[#A94F70]/70 font-medium mt-1 flex items-center gap-1 select-none">
+                <span>✦</span>
+                <span>{isTitlePopped ? 'klik judul lagi untuk mengembalikan 🌸' : 'coba klik judulnya ✨'}</span>
+              </div>
+            </div>
 
             {/* Official English Tagline */}
             <p className="text-lg sm:text-xl font-medium text-[#7A5B67] italic font-['Fraunces']">

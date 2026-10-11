@@ -61,3 +61,59 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #D98FA6;
 }
+
+/* Glowing & flickering title animation */
+@keyframes titleGlowFlicker {
+  0%, 100% {
+    text-shadow: 0 0 14px rgba(169, 79, 112, 0.5), 0 0 28px rgba(247, 221, 229, 0.9);
+    filter: drop-shadow(0 0 6px rgba(169, 79, 112, 0.35));
+    opacity: 1;
+  }
+  20% {
+    text-shadow: 0 0 5px rgba(169, 79, 112, 0.25), 0 0 12px rgba(247, 221, 229, 0.5);
+    opacity: 0.93;
+  }
+  25% {
+    text-shadow: 0 0 18px rgba(169, 79, 112, 0.65), 0 0 34px rgba(247, 221, 229, 0.95);
+    opacity: 1;
+  }
+  55% {
+    text-shadow: 0 0 9px rgba(169, 79, 112, 0.35);
+    opacity: 0.96;
+  }
+  60% {
+    text-shadow: 0 0 22px rgba(169, 79, 112, 0.75), 0 0 38px rgba(217, 143, 166, 0.9);
+    filter: drop-shadow(0 0 9px rgba(169, 79, 112, 0.45));
+    opacity: 1;
+  }
+  75% {
+    text-shadow: 0 0 6px rgba(169, 79, 112, 0.3);
+    opacity: 0.94;
+  }
+  80% {
+    text-shadow: 0 0 20px rgba(169, 79, 112, 0.6), 0 0 32px rgba(247, 221, 229, 0.9);
+    opacity: 1;
+  }
+}
+
+.title-glow-flicker {
+  animation: titleGlowFlicker 2.8s ease-in-out infinite;
+}
+
+@keyframes popOut {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  55% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pop-out {
+  animation: popOut 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
