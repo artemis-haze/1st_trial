@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import heroStationery from '../assets/images/hero_stationery_tcl_1791675267552.jpg';
+import mascotBunga from '../assets/images/mascot_bunga_pusing_1791675253387.jpg';
 import { siteConfig } from '../config/siteConfig';
 import { BookOpen, Sparkles, ArrowRight, Baby, HelpCircle, Layers, CheckCircle2 } from 'lucide-react';
 
