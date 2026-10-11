@@ -1,0 +1,8 @@
+{
+  "name": "RADA PUSING",
+  "description": "A curious little space to explore Teacher-Centered Learning. Media belajar interaktif seputar konsep pedagogi TCL oleh Kelompok 1.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

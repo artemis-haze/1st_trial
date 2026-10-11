@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Fraunces', serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+
+  --color-cream: #FFF9F4;
+  --color-blush: #F7DDE5;
+  --color-babypink: #FCECF1;
+  --color-dustyrose: #D98FA6;
+  --color-deeprose: #A94F70;
+  --color-sage: #A9BDA5;
+  --color-sage-dark: #5C7558;
+  --color-lavender: #E9E1F5;
+  --color-charcoal: #2D2226;
+}
+
+/* Stationery & Garden Aesthetic Accents */
+.stationery-grid {
+  background-size: 24px 24px;
+  background-image: 
+    radial-gradient(circle, rgba(169, 79, 112, 0.08) 1px, transparent 1px);
+}
+
+.notebook-lines {
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom, transparent 27px, rgba(217, 143, 166, 0.15) 28px);
+}
+
+.tape-effect {
+  position: relative;
+}
+.tape-effect::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 90px;
+  height: 22px;
+  background: rgba(247, 221, 229, 0.7);
+  backdrop-filter: blur(2px);
+  border: 1px dashed rgba(169, 79, 112, 0.25);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  z-index: 10;
+}
+
+/* Custom delicate scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F4;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8CCD5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D98FA6;
+}
